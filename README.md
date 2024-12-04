@@ -277,7 +277,7 @@ Choosing option 3 in the main menu will exit the application itself.
 
 Upon exiting the application, you will receive a thank you and see you again soon message.
 
-## Ethical issues and how those issues are addressed in this project
+## Ethics and standards - issues, how they are addressed and future improvements
 
 With the childcare management terminal application handling sensitive data and protecting these data and information is vital. As such, robust privacy practices are essential throughout the software development process to prevent data exposure or exploitation.  
 
