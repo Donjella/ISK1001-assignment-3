@@ -1,3 +1,5 @@
+# Code comments to be added
+
 from functions.student_functions import add_student, list_guardian_details
 from functions.classroom_functions import list_students_by_classroom, delete_student, count_total_students
 from classes.classrooms import students, Classroom
