@@ -71,7 +71,7 @@ def add_student(students, classrooms):
             age_in_years = (datetime.now() - birthday_date).days // 365
             # Check if the age falls within any classroom range
             if not any(classroom.is_valid_for_age(age_in_years) for classroom in classrooms):
-                print(f"Student's age ({age_in_years} years) is out of the range for all available classrooms. No further input is needed")
+                print(f"{color5}Student's age is out of the range for all available classrooms. No further input is needed{Style.reset}")
                 return  # Exit the function without collecting more input
             break
         except ValueError:

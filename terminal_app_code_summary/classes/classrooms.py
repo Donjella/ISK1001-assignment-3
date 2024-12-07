@@ -8,8 +8,8 @@ class Classroom:
     def __init__(self, name, min_age, max_age):
         # Initialises the classroom with its name, age range, and an empty student list.
         self.name = name # name (str): The name of the classroom.
-        self.min_age = min_age # The (int) minimum age (inclusive) for students in this classroom.
-        self.max_age = max_age # The (int) maximum age (inclusive) for students in this classroom.
+        self.min_age = min_age # The (int) minimum age for students in this classroom.
+        self.max_age = max_age # The (int) maximum age for students in this classroom.
         self.students = [] # students (list): A list to store students assigned to this classroom.
 
     def is_valid_for_age(self, age):
@@ -18,7 +18,7 @@ class Classroom:
         # Arguments: age (int): The student's age.
         # Returns -  bool: True if the age is within the classroom's range, False otherwise.
 
-        # Example: if classroom.is_valid_for_age(student.age) -> classroom.students.append(student) 
+        # Example: if classroom.is_valid_for_age(student.age) returns True, execute classroom.students.append(student) 
         # i.e. If the student's age is valid for the classroom, add them to the classroom's list of students.
         return self.min_age <= age < self.max_age
 
@@ -53,3 +53,4 @@ kindergarten_classroom = Classroom("Kindergarten Room(3-5 years)", 3, 5)
 #             classroom.students.append(student)
 #             break
 classrooms = [babies_classroom, toddlers_classroom, kindergarten_classroom]
+
