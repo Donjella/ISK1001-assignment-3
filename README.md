@@ -331,7 +331,7 @@ These ethical considerations are addressed in the application in the following w
 
 3.	Error handling and validation: Input validation ensures data entered into the system is complete and correct, reducing the risk of inaccuracies or corrupted records. To illustrate, validating birthdates to ensure correct classroom allocation and allergy input process that prevents empty or invalid entries such as nonsensical data (special characters and numbers) with both allowing users to exit gracefully if they cannot or choose not to complete the input. This reduces the risk of incorrect allergy information or classroom allocations that could potentially endanger the safety or well-being of children.  
 
-### Future implementations to consider on ethical issues
+### Future implementations to consider regarding ethical issues
 
 While the application currently handles this data safely as an internal use case (for a school project/assignment), additional measures should be considered if it is ever scaled to include a wider scope or becomes part of a web-based or distributed system.  
 
