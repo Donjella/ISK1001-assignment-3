@@ -104,7 +104,7 @@ Therefore, future actions can include implementing the `relativedelta` class fro
 
 Overall, implementing this feedback to enhance the application for future improvements involves further development and testing. These tests should focus on addressing various edge cases, including scenarios such as birthdays near the end of February (to ensure proper handling of leap years) and a variety of year-month combinations to validate accuracy across diverse date inputs. By incorporating these improvements, the application's reliability and accuracy will be enhanced, while also reducing redundant or repetitive code. This will align the functionality more closely with real-world scenarios, further strengthening its practical value.
 
-### Feedback Instance 4
+## Feedback Instance 4
 
 **Specific documentation checked:** Childcare Management App - README.md  
 **Date of feedback received:** 06/12/2024  
@@ -117,7 +117,7 @@ Evan reviewed the README.md file and praised it as being very well-written, info
 
 Upon reflection, the suggestion to expand the README.md with more detailed instructions for cloning or forking the repository is valuable for improving the usability of the documentation. While the current README.md file is thorough, this enhancement will ensure that developers of varying experience levels can seamlessly set up the project.
 
-Actions implemented to address feedback:
+**Actions implemented to address feedback:**
 1. **Expanded the "Cloning/Forking the Repository" Section in the project's [README](https://github.com/Donjella/ISK1001-assignment-3):**  
    - Included a step-by-step guide for cloning the repository using Git, including terminal commands.
    - Added instructions for forking the repository, with details on how to do so through GitHub's interface.
