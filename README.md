@@ -41,7 +41,28 @@ By streamlining the enrolment process, this feature not only addresses administr
 ## Application Setup
 Users can clone or fork the code of the application from its [GitHub repository](https://github.com/Donjella/assignment-2-CSA).
 
-The application uses both in-built and external libraries:
+To clone this repository:
+
+1. On this repository, above the list of files, click <> Code
+![screenshot for code button to clone repository](screenshots/code_button.png)
+
+2. Copy the URL for the repository. To clone the repository using an SSH key, including a certificate issued by your organization's SSH certificate authority, click SSH and copy the URL.![screenshot for SSH link to clone repository](screenshots/clone_ssh.png)
+
+3. Open Terminal.
+
+4. Change the current working directory to the location where you want the cloned directory.
+
+5. Type git clone, and then paste the URL you copied earlier 
+
+    `git clone <SSH URL>`
+
+6. Press ENTER to create your local clone.
+
+More information about cloning a repository can be found [here](https://docs.github.com/en/repositories/creating-and-managing-repositories/cloning-a-repository).
+
+-----
+
+The application also uses both in-built and external libraries:
 
 1. [Colored](https://pypi.org/project/colored/)
 2. [PrettyTable](https://pypi.org/project/prettytable/)
@@ -69,6 +90,9 @@ source .venv/bin/activate
 3. **requirements.txt** file is included in the application's [GitHub repository](https://github.com/Donjella/assignment-2-CSA). Hence, users can quickly install project dependencies once the virtual environment is active.  
 
 ```bash
+# Ensure pip is installed and upgraded to the latest version
+python -m pip install --upgrade pip
+
 # Install dependencies from requirements.txt.
 pip install -r requirements.txt
 
