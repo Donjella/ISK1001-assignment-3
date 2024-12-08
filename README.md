@@ -35,7 +35,7 @@
      - [Student Management Menu](#student-management-menu)
      - [Kitchen Management Menu](#kitchen-management-menu)
      - [Exit](#exit)
-7. [Ethics and Standards](#ethics-and-standards)
+7. [Ethics and Standards](#ethics-and-standards---issues-how-they-are-addressed-and-future-improvements)
    - [Ethical Issues Addressed by the Application](#ethical-issues-addressed-by-the-application)
    - [Future Implementations to Consider](#future-implementations-to-consider)
 8. [Third-Party Software Licensing and Security](#third-party-software-licensing-and-security)

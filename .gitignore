@@ -1,0 +1,6 @@
+**/__pycache__/
+**/.pytest_cache/
+video_presentation_slides.pdf
+peer_review_for_tanya.pdf
+peer_review_for_brendon.pdf
+.venv
