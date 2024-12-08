@@ -185,18 +185,6 @@ def save_menu(kitchen):
                     "Lunch": "Chicken Nuggets",
                     "Afternoon Tea": "Cookies"
                 }
-            },
-            "2": {
-                "Monday": {
-                    "Breakfast": "Cereal",
-                    "Lunch": "Fish and Chips",
-                    "Afternoon Tea": "Yogurt"
-                },
-                "Tuesday": {
-                    "Breakfast": "Toast",
-                    "Lunch": "Pizza",
-                    "Afternoon Tea": "Apple Slices"
-                }
             }
         }
 
@@ -272,3 +260,9 @@ def load_menu(kitchen):
         
     except Exception as e:
         print(f"An error occurred while loading the menu: {e}")
+
+
+
+# Example:
+#     save_menu(kitchen) -> Saves the current kitchen menu to a JSON file.
+
