@@ -24,6 +24,23 @@ def add_student(students, classrooms):
     Arguments:
         students (list): The global list of Student instances to update.
         classrooms (list): The list of Classroom instances used for student assignment.
+
+    Example Usage:
+        # Initialize an empty list for students
+        students = []
+
+        # Create classrooms
+        classrooms = [
+            Classroom("Babies Room (0-2 years)", 0, 2),
+            Classroom("Toddlers Room (2-3 years)", 2, 3),
+            Classroom("Kindergarten Room (3-5 years)", 3, 5)
+        ]
+
+        # Call the add_student function
+        add_student(students, classrooms)
+
+        # After execution, the students list will contain the newly added student
+        print(students[0].get_fname())  # Example output: 'John'
     """
 
     # Validate first name (fname)
