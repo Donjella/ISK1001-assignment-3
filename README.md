@@ -2,6 +2,43 @@
 
 ## Table of Contents
 
+1. [Overview and Purpose of the Application](#overview-and-purpose-of-the-application)
+2. [Problem the Project Addresses, Target Audience, and Information](#problem-the-project-addresses-target-audience-and-information)
+   - [Challenges in the Childcare Industry](#challenges-in-the-childcare-industry)
+   - [How the Application Addresses These Challenges](#how-the-application-addresses-these-challenges)
+   - [User Stories and Real-World Use Cases](#user-stories-and-real-world-use-cases)
+3. [Application Setup](#application-setup)
+   - [Cloning the Repository](#cloning-the-repository)
+   - [Dependencies and Third-Party Libraries](#dependencies-and-third-party-libraries)
+   - [Setting Up the Environment](#setting-up-the-environment)
+4. [Application Features](#application-features)
+   - [Student Management Menu](#student-management-menu)
+     - [Add Student](#add-student)
+     - [Delete Student](#delete-student)
+     - [List Students](#list-students)
+     - [Display Parent/Guardian Details](#display-parentguardian-details)
+   - [Kitchen Management Menu](#kitchen-management-menu)
+     - [Add/Update Menu for the Day](#addupdate-menu-for-the-day)
+     - [Delete Menu for the Day](#delete-menu-for-the-day)
+     - [List Menu for the Week](#list-menu-for-the-week)
+     - [List Students with Allergies](#list-students-with-allergies)
+   - [Data Persistence](#data-persistence)
+   - [Styled Outputs](#styled-outputs)
+   - [Error Handling and Input Validation](#error-handling-and-input-validation)
+5. [Using the Application and Its Features](#using-the-application-and-its-features)
+   - [Running the Application](#running-the-application)
+   - [Main Menu Options](#main-menu-options)
+     - [Student Management Menu](#student-management-menu)
+     - [Kitchen Management Menu](#kitchen-management-menu)
+     - [Exit](#exit)
+6. [Ethics and Standards](#ethics-and-standards)
+   - [Ethical Issues Addressed by the Application](#ethical-issues-addressed-by-the-application)
+   - [Future Implementations to Consider](#future-implementations-to-consider)
+7. [Third-Party Software Licensing and Security](#third-party-software-licensing-and-security)
+   - [Overview of Third-Party Libraries Used](#overview-of-third-party-libraries-used)
+   - [Licensing Compatibility](#licensing-compatibility)
+   - [Security Impact Overview](#security-impact-overview)
+
 ## Overview and purpose of the application
 This childcare management terminal application is designed to streamline and simplify the organization of classrooms, student records, caregiver details, and kitchen operations, with a default capacity of 100 students. By automating key administrative tasks, it enables efficient and accurate management of childcare centre operations.  
 
