@@ -43,10 +43,13 @@ Users can clone or fork the code of the application from its [GitHub repository]
 
 To clone this repository:
 
-1. On this repository, above the list of files, click <> Code
+1. On this repository, above the list of files, click the green <> Code button  
+
 ![screenshot for code button to clone repository](screenshots/code_button.png)
 
-2. Copy the URL for the repository. To clone the repository using an SSH key, including a certificate issued by your organization's SSH certificate authority, click SSH and copy the URL.![screenshot for SSH link to clone repository](screenshots/clone_ssh.png)
+2. Copy the URL for the repository. To clone the repository using an SSH key, including a certificate issued by your organization's SSH certificate authority, click SSH and copy the URL.  
+
+![screenshot for SSH link to clone repository](screenshots/clone_ssh.png)
 
 3. Open Terminal.
 
@@ -328,10 +331,64 @@ These ethical considerations are addressed in the application in the following w
 
 3.	Error handling and validation: Input validation ensures data entered into the system is complete and correct, reducing the risk of inaccuracies or corrupted records. To illustrate, validating birthdates to ensure correct classroom allocation and allergy input process that prevents empty or invalid entries such as nonsensical data (special characters and numbers) with both allowing users to exit gracefully if they cannot or choose not to complete the input. This reduces the risk of incorrect allergy information or classroom allocations that could potentially endanger the safety or well-being of children.  
 
+### Future implementations to consider on ethical issues
+
 While the application currently handles this data safely as an internal use case (for a school project/assignment), additional measures should be considered if it is ever scaled to include a wider scope or becomes part of a web-based or distributed system.  
 
 For instance, although the application ensures data is stored securely in a structured and organized way, it does not explicitly request consent for data storage, implementing a consent step (a prompt asking permission to save data) would strengthen compliance with ethical data protection standards. Asking for consent would also align with [General Data Protection Regulation (GDPR)](https://gdpr.eu/what-is-gdpr/), a global benchmark for data privacy that emphasizes obtaining explicit consent for data collection, allowing individuals to access or delete their data, and ensuring secure storage. If the application were to scale for international use, compliance with GDPR would be essential.   
 
 Lastly, though not exhaustively, future improvements could include an administrator login for accessing student management functions, enabling security-focused testing. This would facilitate protections against unauthorized access, data handling and exposure risks with proper encryption protocols. Additionally, regular monitoring and bias checks throughout development would support ethical transparency and accountability. Fostering an ethical developmental and testing process requires ongoing vigilance and a commitment to continuous improvement. Hence, we will continue to anticipate and address emerging ethical concerns to ensure high quality and responsible software development.
 
+### Third-party software licensing and security
+The application makes use of various third-party software to facilitate its functionality and enhance user experience. 
+
+Below is a comprehensive list of the third-party libraries used, their purposes, licenses, and information on their security and ethical impact.
+
+1. ### [Colored](https://pypi.org/project/colored/)  
+  
+  - **Purpose**: to add color and styles to output in the application.
+  - **Licence**: MIT Licence
+  - **Ethical, legal and security impacts**: The library handles terminal output only and does not interact with sensitive data or external systems, ensuring minimal security risk.
+
+2. ### [PrettyTable](https://pypi.org/project/prettytable/)
+  
+  - **Purpose**: PrettyTable is used within the application to create clean, well-formatted tables in this CLI app to display kitchen and student-related information.
+  - **Licence**: BSD Licence
+  - **Ethical, legal and security impacts**: PrettyTable is a pure table formatting library that poses no security risk as it doesn't process external inputs or handle sensitive data.
+
+3. ### [JSON](https://pypi.org/project/colored/)  
+  
+  - **Purpose**: For reading from and writing to JSON files for student and kitchen data persistence.
+  - **Licence**: Python Software Foundation Licence
+  - **Ethical, legal and security impacts**: JSON is a built-in Python module and is secure for handling data serialization as long as it does not process untrusted input without proper validation.
+
+4. ### [Pytest](https://docs.pytest.org/en/latest/) 
+  
+  - **Purpose**: Python testing framework for running unit tests to ensure code quality.
+  - **Licence**: Python Software Foundation Licence
+  - **Ethical, legal and security impacts**: Pytest is a testing framework used during development and testing phases only. It does not run in production and does not introduce any runtime security vulnerabilities.
+
+5. ### [Pytest Mock](https://pytest-mock.readthedocs.io/en/)
+  
+  - **Purpose**: A plugin for pytest that provides easy mocking functionality to enable isolatation to parts of the application and test components effectively.
+  - **Licence**: Python Software Foundation Licence
+  - **Ethical, legal and security impacts**: Similar to pytest, it has no security impact on the production environment as it is used solely for development and testing.
+
+6. ### [Python datetime module](https://docs.python.org/3/library/datetime.html) 
+
+  - **Purpose**: A built-in Python module for handling dates and times, crucial for student age calculations and its related functionalities within the application.
+  - **Licence**: Python Software Foundation Licence
+  - **Ethical, legal and security impacts**: datetime is a secure module for handling date and time operations and does not introduce any security vulnerabilities.
+
+7. ###  [Python Random Module](https://docs.python.org/3/library/random.html) 
+
+  - **Purpose**: - A built-in Python module used to generate random unique student IDs for students in the application.
+  - **Licence**: Python Software Foundation Licence
+  - **Ethical, legal and security impacts**: The random module is suitable for generating unique IDs within the scope of this application. However, it is not intended for cryptographic purposes or secure applications beyond this context. For example, generating Secure Keys, Tokens or password hashing require high levels of randomness and unpredictability that go beyond what general-purpose modules like random can provide, typically to use in specialized cryptographic libraries.
+
+### License Compatibility
+All third-party libraries used are under permissive licenses such as MIT, BSD, and Python Software Foundation License. These licenses are compatible with each other and permit usage, modification, and distribution of the code without conflict. This ensures the application adheres to open-source principles without any licensing issues.
+
+### Security Impact Overview
+All third-party software used in this application has been chosen for their reliability and security. Most of the libraries either handle formatting (like colored, PrettyTable) or are used in a development/testing context (pytest, pytest-mock). The Python built-in libraries (datetime, random, json) are secure when used appropriately and do not introduce any security vulnerabilities into the application when handling trusted data.
 
