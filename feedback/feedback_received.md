@@ -104,24 +104,6 @@ Therefore, future actions can include implementing the `relativedelta` class fro
 
 Overall, implementing this feedback to enhance the application for future improvements involves further development and testing. These tests should focus on addressing various edge cases, including scenarios such as birthdays near the end of February (to ensure proper handling of leap years) and a variety of year-month combinations to validate accuracy across diverse date inputs. By incorporating these improvements, the application's reliability and accuracy will be enhanced, while also reducing redundant or repetitive code. This will align the functionality more closely with real-world scenarios, further strengthening its practical value.
 
-## Feedback instance 4
-
-**Specific documentation checked:** Childcare Management App –  README documentation 
-**Date of feedback received:** 06/12/2024   
-**Who checked it:** Evan and Jack  
-**Feedback Provided:**  
-*  Code comments and codes: Feedback highlighted that the project is clean, well built and easy to understand by users with very detailed comments. Nevertheless, while the codes and comments are well-written, Evan suggested that we can use the `dateutil` library to calculate age instead of doing it manually. Specifically mentioning that we can use `dateutil` instead of
-```age_in_years = (datetime.now() - birthday_date).days // 365``` in line 71 of the add_student function within your student_functions.py file.
-
-
-**Reflection and actions to do based on the feedback:**  
-
-Upon reflection, the suggestion to use the `dateutil` library to calculate age will introduce a more accurate and robust method for handling date and time calculations. Currently, the manual calculation of age uses the division of the number of days by 365. It offers a good approximation but lacks precision for edge cases such as leap years and varying month lengths. Adopting *dateutil* would enhance the reliability and accuracy of the application, particularly for age-based classroom assignments.
-
-Therefore, future actions can include implementing the `relativedelta` class from the `dateutil` libary to to handle differences between two dates or to manipulate dates by adding or subtracting specific time intervals. Unlike simple arithmetic operations, `relativedelta` accounts for calendar-based complexities, such as varying month lengths and leap years.  
-
-Overall, implementing this feedback to enhance the application for future improvements involves further development and testing. These tests should focus on addressing various edge cases, including scenarios such as birthdays near the end of February (to ensure proper handling of leap years) and a variety of year-month combinations to validate accuracy across diverse date inputs. By incorporating these improvements, the application's reliability and accuracy will be enhanced, while also reducing redundant or repetitive code. This will align the functionality more closely with real-world scenarios, further strengthening its practical value.
-
 ### Feedback Instance 4
 
 **Specific documentation checked:** Childcare Management App - README.md  
