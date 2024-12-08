@@ -13,21 +13,58 @@ class Classroom:
         self.students = [] # students (list): A list to store students assigned to this classroom.
 
     def is_valid_for_age(self, age):
-        # Checks if a given age falls within the classroom's age range.
-        # Purpose: Validates whether a student's age falls within the classroom's age range.
-        # Arguments: age (int): The student's age.
-        # Returns -  bool: True if the age is within the classroom's range, False otherwise.
+        """
+    Check if a given age falls within the classroom's defined age range.
 
-        # Example: if classroom.is_valid_for_age(student.age) returns True, execute classroom.students.append(student) 
-        # i.e. If the student's age is valid for the classroom, add them to the classroom's list of students.
+    Purpose:
+        Validates whether a student's age is appropriate for the classroom by comparing it
+        to the classroom's minimum and maximum age attributes.
+
+    Arguments:
+        age (int): The age of the student to validate.
+
+    Returns:
+        bool: True if the student's age falls within the classroom's range, False otherwise.
+
+    Example Usage:
+        # Sample Data
+        classroom = Classroom("Toddlers Room (2-3 years)", 2, 3)
+
+        # Check if a student with age 2.5 is valid for the classroom
+        is_valid = classroom.is_valid_for_age(2.5)
+        print(is_valid)  # Output: True
+
+        # Check if a student with age 3.5 is valid for the classroom
+        is_valid = classroom.is_valid_for_age(3.5)
+        print(is_valid)  # Output: False
+
+        # Practical Application:
+        if classroom.is_valid_for_age(student.age):
+            classroom.students.append(student)
+    """
         return self.min_age <= age < self.max_age
 
     def get_name(self):
-        # Retrieve the name of the classroom.
-        # Purpose: Provides the name of the classroom for display or reference.
-        # Returns - str: The name of the classroom.
+        """
+    Retrieve the name of the classroom.
 
-        # Example: print(classroom.get_name()) -> Output: "Babies Room (0-2 years)
+    Purpose:
+        Provides the name of the classroom for display or reference purposes.
+        This method is useful when identifying or listing classrooms within the application.
+
+    Returns:
+        str: The name of the classroom.
+
+    Example Usage:
+        # Sample Data
+        classroom = Classroom("Babies Room (0-2 years)", 0, 2)
+
+        Usage Example:
+        # Retrieve and print the classroom's name
+        print(classroom.get_name())  
+
+        Output: "Babies Room (0-2 years)"
+        """
         return self.name
 
 # Global list of students
