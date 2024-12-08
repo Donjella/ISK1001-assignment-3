@@ -85,11 +85,9 @@ Users can clone or fork the code of the application from its [GitHub repository]
 To clone this repository:
 
 1. On this repository, above the list of files, click the green <> Code button  
-
 ![screenshot for code button to clone repository](screenshots/code_button.png)
 
 2. Copy the URL for the repository. To clone the repository using an SSH key, including a certificate issued by your organization's SSH certificate authority, click SSH and copy the URL.  
-
 ![screenshot for SSH link to clone repository](screenshots/clone_ssh.png)
 
 3. Open Terminal.
