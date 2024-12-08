@@ -1,13 +1,18 @@
-# Code comments to be added
+# Importing built-in modules (no installation needed)
+from colored import Style  # External library used for adding color and style to terminal output.
 
-from functions.student_functions import add_student, list_guardian_details
-from functions.classroom_functions import list_students_by_classroom, delete_student, count_total_students
-from classes.classrooms import students, Classroom
-from classes.kitchen import Kitchen
-from functions.kitchen_functions import list_menu_for_week, add_menu_for_day, list_students_with_allergies, delete_menu_for_day
-from functions.file_functions import save_students, load_students, save_menu, load_menu
-from constants import color1, color2, color3, color4, color5
-from colored import Style
+# Importing third-party libraries (require installation via pip)
+# No third-party libraries are used in this file.
+
+# Importing internal modules/files (created within the project)
+from constants import color1, color2, color3, color4, color5  # Internal module storing constant variables for consistent styling across the app.
+from functions.student_functions import add_student, list_guardian_details  # Functions to manage students: adding, deleting, and displaying guardian details.
+from functions.classroom_functions import list_students_by_classroom, delete_student, count_total_students  # Functions for classroom-related operations: listing, deleting students, and counting the total number of students.
+from classes.classrooms import students, Classroom  # Internal classes for managing student instances and classroom configurations.
+from classes.kitchen import Kitchen  # Internal class for managing kitchen operations, including meal planning and allergy tracking.
+from functions.kitchen_functions import list_menu_for_week, add_menu_for_day, list_students_with_allergies, delete_menu_for_day  # Functions for managing kitchen operations: adding, updating, listing menus, and handling allergy lists.
+from functions.file_functions import save_students, load_students, save_menu, load_menu  # Functions for saving and loading data persistently to/from JSON files for students and kitchen menus.
+
 
 # Global list for students
 students = []
@@ -29,7 +34,22 @@ kitchen = Kitchen()
 load_menu(kitchen)
 
 def create_menu(menu_title, options, valid_choices):
-    """Generic function to display a menu and get a validated user choice."""
+    """
+    Generic function to display a menu and get a validated user choice.
+
+    Purpose:
+        Display a menu with the given title and options, validate the user's input, and return the valid choice.
+
+    Arguments:
+        menu_title (str): The title of the menu to be displayed.
+        options (list of str): A list of menu options to display.
+        valid_choices (list of str): A list of valid input choices.
+
+    Example Usage:
+    create_menu("Main Menu", ["1. Students", "2. Kitchen", "3. Exit"], ["1", "2", "3"])
+    Input: "1"
+    Returns: "1", which leads to the Student Management Menu being displayed.
+    """
     while True:
         try:
             print(f"\n{menu_title}")
@@ -46,6 +66,18 @@ def create_menu(menu_title, options, valid_choices):
             return valid_choices[-1]  # Return the last valid choice to exit gracefully
 
 def create_main_menu():
+    """
+    Displays the main menu and returns the user's choice.
+
+    Purpose:
+        Provide the main entry point for navigation in the application, allowing users to choose between
+        student management, kitchen management, or exiting the application.
+
+    Example Usage:
+        create_main_menu() -> Displays the main menu and waits for user input.
+        Input: "1"
+        Returns: "1" to indicate the Student Management menu should be opened.
+    """
     welcome_message = f"{color1}Welcome to the Childcare Management Application{Style.reset}\nWhat would you like to manage?\n"
     return create_menu(
         welcome_message,
@@ -54,6 +86,18 @@ def create_main_menu():
     )
 
 def create_student_menu():
+    """
+    Displays the student management menu and returns the user's choice.
+
+    Purpose:
+        Allow users to perform various student management tasks, such as adding or deleting students,
+        listing students, and viewing guardian details.
+
+    Example:
+        create_student_menu() -> Displays the student menu and waits for user input.
+        Input: "1"
+        Returns: "1" to indicate the Add Student option should be executed.
+    """
     student_header = f"{color2}Student Management Menu{Style.reset}\nWhat would you like to do?\n"
     return create_menu(
         student_header,
@@ -68,6 +112,17 @@ def create_student_menu():
     )
 
 def create_kitchen_menu():
+    """
+    Displays the kitchen management menu and returns the user's choice.
+
+    Purpose:
+        Allow users to manage the kitchen menu, including adding, updating, deleting, or listing meal plans.
+
+    Example:
+        create_kitchen_menu() -> Displays the kitchen menu and waits for user input.
+        Input: "3"
+        Returns: "3" to indicate the List Menu for the Week option should be executed.
+    """
     kitchen_header = f"{color2}Kitchen Management Menu{Style.reset}\nWhat would you like to do?\n"
     return create_menu(
         kitchen_header,
