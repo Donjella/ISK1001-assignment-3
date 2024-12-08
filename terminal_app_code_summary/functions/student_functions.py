@@ -252,6 +252,24 @@ def list_guardian_details(students):
         3. Displays the guardian's full name, contact number, and email by retrieving guardian details for a specific student by ID.
         4. It also includes exception Handling that handles invalid inputs, such as non-numeric student IDs and it
            Provides feedback if no students are enrolled or if no student is found with the entered ID.
+
+    Example Usage:
+        # Create a list of students
+        students = [
+            Student(fname="Cole", lname="Palmer", birthday="2017-05-22", guardian=ParentGuardian("Romeo", "Lavia", "0401234567", "romeo.lavia@example.com")),
+            Student(fname="Paul", lname="Pogba", birthday="2015-03-15", guardian=ParentGuardian("Brendon", "Pogba", "0412345678", "brendon.pogba@gmail.com"))
+        ]
+
+        # Call the function
+        list_guardian_details(students)
+
+        # Expected user interaction:
+        # Input: Enter the student ID to view guardian details: 1
+        # Output:
+        #   Student: Cole Palmer (ID: 1)
+        #   Guardian Name: Romeo Lavia
+        #   Contact Number: 0401234567
+        #   Contact Email: romeo.lavia@example.com
     """
 
     # if no students are enrolled
